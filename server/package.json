@@ -1,0 +1,24 @@
+{
+  "name": "abit-fest-2026-server",
+  "version": "1.0.0",
+  "description": "Backend API for ABIT FEST 2026 - Ajay Binay Institute of Technology, Cuttack",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "node --watch index.js"
+  },
+  "dependencies": {
+    "bcryptjs": "^3.0.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.5.0",
+    "express": "^5.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.15.0",
+    "multer": "^2.0.0",
+    "nodemailer": "^7.0.3",
+    "pdfkit": "^0.16.0",
+    "qrcode": "^1.5.4",
+    "xlsx": "^0.18.5"
+  }
+}

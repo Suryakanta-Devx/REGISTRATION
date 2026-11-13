@@ -1,0 +1,75 @@
+/* Sprinkle Animation */
+.sprinkle-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+}
+
+.sprinkle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 10px;
+  height: 10px;
+  background-color: var(--primary-glow);
+  border-radius: 50%;
+  animation: pop 1s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+  opacity: 0;
+}
+
+.sprinkle:nth-child(1) { background-color: var(--primary-glow); --tx: -80px; --ty: -100px; animation-delay: 0.1s; }
+.sprinkle:nth-child(2) { background-color: var(--accent-glow); --tx: 80px; --ty: -80px; animation-delay: 0.2s; }
+.sprinkle:nth-child(3) { background-color: #00ffaa; --tx: -100px; --ty: 20px; animation-delay: 0.15s; }
+.sprinkle:nth-child(4) { background-color: #ffbb00; --tx: 100px; --ty: 40px; animation-delay: 0.05s; }
+.sprinkle:nth-child(5) { background-color: #ff003c; --tx: 0px; --ty: -120px; animation-delay: 0.25s; }
+.sprinkle:nth-child(6) { background-color: #00f0ff; --tx: -60px; --ty: 80px; animation-delay: 0.1s; }
+.sprinkle:nth-child(7) { background-color: #7000ff; --tx: 60px; --ty: 100px; animation-delay: 0.2s; }
+.sprinkle:nth-child(8) { background-color: #ffbb00; --tx: 120px; --ty: -30px; animation-delay: 0.15s; }
+.sprinkle:nth-child(9) { background-color: #ff003c; --tx: -120px; --ty: -40px; animation-delay: 0.05s; }
+.sprinkle:nth-child(10) { background-color: #00ffaa; --tx: 0px; --ty: 120px; animation-delay: 0.2s; }
+
+@keyframes pop {
+  0% {
+    transform: translate(-50%, -50%) scale(0);
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    transform: translate(calc(-50% + var(--tx)), calc(-50% + var(--ty))) scale(1.5);
+    opacity: 0;
+  }
+}
+
+.success-message-container {
+  text-align: center;
+  padding: 4rem 2rem;
+  position: relative;
+  overflow: visible;
+}
+
+.success-icon {
+  width: 80px;
+  height: 80px;
+  background: rgba(0, 255, 170, 0.1);
+  color: #00ffaa;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.5rem;
+  border: 2px solid #00ffaa;
+  box-shadow: 0 0 20px rgba(0, 255, 170, 0.4);
+  animation: scaleIn 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
+
+@keyframes scaleIn {
+  from { transform: scale(0); }
+  to { transform: scale(1); }
+}
